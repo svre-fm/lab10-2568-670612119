@@ -31,7 +31,6 @@ export default function RandomUserPage() {
     const resp = await axios.get(
       `https://randomuser.me/api/?results=${genAmount}`
     );
-    setIsLoading(false);
     const users = resp.data.results;
     const CleaneUser = users.map((i:any) => cleanUser(i));
     setUsers(CleaneUser);
